@@ -13,3 +13,4 @@ contains some python code that recreates basic GIS topology calculations (as e.g
 ### Resources
 - http://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/how-aspect-works.htm
 - https://en.wikipedia.org/wiki/User:LucasVB/Gallery#/media/File:Circle_radians.gif
+- https://www.khanacademy.org/math/algebra2/trig-functions/intro-to-radians-alg2/v/introduction-to-radians
