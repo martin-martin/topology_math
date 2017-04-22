@@ -1,3 +1,11 @@
+# NOTE: I wrote this whole thing to find out where did the number 57.29578 come from 🤔
+# that I found here unexplained (still learning some basic math things):
+# http://desktop.arcgis.com/en/arcmap/10.3/tools/spatial-analyst-toolbox/how-aspect-works.htm
+
+# also found this visualization on the way and it's beautiful and related:
+# https://en.wikipedia.org/wiki/User:LucasVB/Gallery#/media/File:Circle_radians.gif
+
+# here's the code
 import math
 
 def radians_to_degrees(radians):
