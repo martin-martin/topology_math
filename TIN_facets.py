@@ -10,9 +10,9 @@ pt3 = (15, 30, 30)
 #z(x,y) = b0 + b1 * x + b2 * y
 
 # factors (calculated by hand)
-b0 = -6.9
+b0 = 30
 b1 = -0.25
-b2 = 1.28
+b2 = 0.125
 
 # how to calculate slope and aspect of the facet
 slope = math.atan(math.sqrt(b1**2 + b2**2))
