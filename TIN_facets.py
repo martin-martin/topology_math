@@ -15,8 +15,16 @@ b1 = -0.25
 b2 = 0.125
 
 # how to calculate slope and aspect of the facet
-slope = math.atan(math.sqrt(b1**2 + b2**2))
-aspect = 180 - math.atan(b2 / b1) + 90 * (b1 / abs(b1))
+slope_degrees = math.atan(math.sqrt(b1**2 + b2**2)) * (180/math.pi)
+aspect = (180/math.pi) * math.atan2(b2, -b1)
 
-print("slope of facet: {0}".format(slope))
-print("aspect of facet: {0}".format(aspect))
+# convert aspect to compass direction
+if aspect < 0:
+	aspect_compass = 90.0 - aspect
+elif aspect > 90.0:
+	aspect_compass = 360.0 - aspect + 90.0
+else:
+	aspect_compass = 90.0 - aspect
+
+print("slope of facet in degrees: {0}".format(slope_degrees))
+print("aspect of facet in compass direction: {0}".format(aspect_compass))
