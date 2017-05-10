@@ -14,10 +14,15 @@ b0 = 30
 b1 = -0.25
 b2 = 0.125
 
-# how to calculate slope and aspect of the facet
-slope_degrees = math.atan(math.sqrt(b1**2 + b2**2)) * (180/math.pi)
-aspect = (180/math.pi) * math.atan2(b2, -b1)
 
+
+# how to calculate slope and aspect of the facet
+
+###### SLOPE ######
+slope_degrees = math.atan(math.sqrt(b1**2 + b2**2)) * (180/math.pi)
+
+###### ASPECT #1 ######
+aspect = (180/math.pi) * math.atan2(b2, -b1)
 # convert aspect to compass direction
 if aspect < 0:
 	aspect_compass = 90.0 - aspect
@@ -26,5 +31,13 @@ elif aspect > 90.0:
 else:
 	aspect_compass = 90.0 - aspect
 
+###### ASPECT #2 ######
+# a different (correct?) way to calculate the aspect of a facet
+# done by consulting the glorious ASPECT QUADRANT
+aspect_new = math.atan(b1 / b2) + 90
+
 print("slope of facet in degrees: {0}".format(slope_degrees))
 print("aspect of facet in compass direction: {0}".format(aspect_compass))
+print("aspect of facet in compass direction, new calculation: {0}".format(aspect_compass))
+
+# hm... these results look suspiciously the same!
