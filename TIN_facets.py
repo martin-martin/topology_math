@@ -33,11 +33,10 @@ else:
 
 ###### ASPECT #2 ######
 # a different (correct?) way to calculate the aspect of a facet
-# done by consulting the glorious ASPECT QUADRANT
-aspect_new = math.atan(b1 / b2) + 90
+# done by consulting the glorious ASPECT QUADRANT (attention, currently buggy!)
+# check this: https://answers.yahoo.com/question/index?qid=20070602085404AAPmPow
+aspect_new = math.atan(b1 / b2) + 180
 
 print("slope of facet in degrees: {0}".format(slope_degrees))
 print("aspect of facet in compass direction: {0}".format(aspect_compass))
-print("aspect of facet in compass direction, new calculation: {0}".format(aspect_compass))
-
-# hm... these results look suspiciously the same!
+print("aspect of facet in compass direction, new calculation: {0}".format(aspect_new))
