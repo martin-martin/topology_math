@@ -35,8 +35,12 @@ else:
 # a different (correct?) way to calculate the aspect of a facet
 # done by consulting the glorious ASPECT QUADRANT (attention, currently buggy!)
 # check this: https://answers.yahoo.com/question/index?qid=20070602085404AAPmPow
-aspect_new = math.atan(b1 / b2) + 180
+aspect_new = 180 - math.atan(b1 / b2)
+
+###### ASPECT #3 ######
+# now using the formula provided in the exercise instructions...
+aspect_form = 180 - math.atan(b2 / b1) + 90 * (b1 / abs(b1))
 
 print("slope of facet in degrees: {0}".format(slope_degrees))
-print("aspect of facet in compass direction: {0}".format(aspect_compass))
-print("aspect of facet in compass direction, new calculation: {0}".format(aspect_new))
+#print("aspect of facet in compass direction: {0}".format(aspect_compass))
+print("aspect of facet in compass direction, new calculation: {0}".format(aspect_form))
